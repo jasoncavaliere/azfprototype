@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "ServiceBusConnection": "Endpoint=sb://p3intake.servicebus.windows.net/;SharedAccessKeyName=readwritepolicy;SharedAccessKey=dQ4EUO01t2qFCLeqKQCdxDE+iO0k2NIpX+ASbLA7iQI=",
+    "ServiceBusQueueName": "intaketest"
+  },
+  "ConnectionStrings": {}
+}

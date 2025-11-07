@@ -1,0 +1,53 @@
+name: Build and Deploy Function
+on:
+  push:
+    paths:
+      - "src/**"
+      - ".github/workflows/app.yml"
+  workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+env:
+  DOTNET_VERSION: "8.0.x"
+  FUNCTIONAPP_NAME: p3demo-func
+  PROJECT_PATH: src/FunctionApp
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Restore
+        run: dotnet restore ${{ env.PROJECT_PATH }}
+      - name: Build
+        run: dotnet build ${{ env.PROJECT_PATH }} --configuration Release --no-restore
+      - name: Publish
+        run: dotnet publish ${{ env.PROJECT_PATH }} --configuration Release --output ${{ github.workspace }}/publish
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: functionapp
+          path: publish
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: functionapp
+          path: publish
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Deploy to Azure Functions
+        uses: Azure/functions-action@v1
+        with:
+          app-name: ${{ env.FUNCTIONAPP_NAME }}
+          package: publish
