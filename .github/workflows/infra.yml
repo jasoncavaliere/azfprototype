@@ -8,7 +8,7 @@ permissions:
   id-token: write
   contents: read
 env:
-  AZURE_RESOURCE_GROUP: rg-func-demo
+  AZURE_RESOURCE_GROUP: enertrek-p3v2
   BICEP_FILE: infra/main.bicep
   PARAMS_FILE: infra/parameters.example.json
 jobs:

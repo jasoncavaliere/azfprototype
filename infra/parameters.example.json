@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "namePrefix": { "value": "p3demo" },
-    "location":   { "value": "centralus" },
-    "sbQueueName":{ "value": "inbox" }
+    "location":   { "value": "southcentralus" },
+    "sbQueueName":{ "value": "intaketest" }
   }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj": {}
+    "c:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj": {
+    "c:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj",
+        "projectUniqueName": "c:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj",
         "projectName": "FunctionApp",
-        "projectPath": "C:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj",
+        "projectPath": "c:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\FunctionApp.csproj",
         "packagesPath": "C:\\Users\\JasonCavaliere\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\obj\\",
+        "outputPath": "c:\\Users\\JasonCavaliere\\Desktop\\daccess\\GitHub\\azfprototype\\src\\FunctionApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JasonCavaliere\\AppData\\Roaming\\NuGet\\NuGet.Config"
